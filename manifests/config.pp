@@ -1,5 +1,6 @@
 class ssh::config(
-  $permit_root_login = $::ssh::params::permit_root_login
+  $permit_root_login = $::ssh::permit_root_login,
+  $port = $::ssh::port,
 ) {
   file {'/etc/ssh/sshd_config':
     ensure  => file,
